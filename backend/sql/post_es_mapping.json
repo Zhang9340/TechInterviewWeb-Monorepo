@@ -1,0 +1,49 @@
+{
+  "aliases": {
+    "question": {}
+  },
+  "mappings": {
+    "properties": {
+      "title": {
+        "type": "text",
+        "analyzer": "standard",
+
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "content": {
+        "type": "text",
+        "analyzer": "standard"
+      },
+      "tags": {
+        "type": "keyword"
+      },
+      "answer": {
+        "type": "text",
+        "analyzer": "standard"
+      },
+      "userId": {
+        "type": "long"
+      },
+      "editTime": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss"
+      },
+      "createTime": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss"
+      },
+      "updateTime": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss"
+      },
+      "isDelete": {
+        "type": "keyword"
+      }
+    }
+  }
+}
